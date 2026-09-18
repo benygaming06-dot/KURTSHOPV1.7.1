@@ -1,0 +1,17 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+android {
+    namespace 'com.kurtmotoshop.v1'
+    compileSdk 35
+    defaultConfig { applicationId 'com.kurtmotoshop.v1'; minSdk 24; targetSdk 35; versionCode 10; versionName '1.7.1' }
+    buildTypes { release { minifyEnabled false; proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' } }
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation platform('com.google.firebase:firebase-bom:34.19.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+}
